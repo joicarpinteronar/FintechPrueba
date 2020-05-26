@@ -1,0 +1,25 @@
+{
+  "name": "proyecto_fintech",
+  "version": "1.0.0",
+  "description": "Aplicacion Prestamos en Linea",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start_daemon": "nodemon index.js",
+    "start": "pm2 start index.js --name ejemplo_nodejs_bictia",
+    "stop": "pm2 stop ejemplo_nodejs_bictia; pm2 delete ejemplo_nodejs_bictia",
+    "open": "start http://localhost"
+  },
+  "keywords": [
+    "curso_node",
+    "financiero",
+    "bictia"
+  ],
+  "author": "Carlos, Marlon, Ivan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.7"
+  }
+}
