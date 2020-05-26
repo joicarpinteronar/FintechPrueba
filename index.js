@@ -13,13 +13,19 @@ const databaseConfig = {
 };
 
 let usersController = require('./app/controllers/users')(databaseConfig);
-//let classesController = require('./app/controllers/classes')(databaseConfig);
+let clientesController = require('./app/controllers/clientes')(databaseConfig);
+let administradorController = require('./app/controllers/administrador')(databaseConfig);
+let solicitudCreditoController = require('./app/controllers/solcitudCredito')(databaseConfig);
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 //{{SERVER}}/users/
 app.use('/users', usersController);
-//app.use('/classes', classesController);
+app.use('/clientes', clientesController);
+app.use('/administrador', administradorController);
+app.use('/solcitudCredito', solicitudCreditoController);
+
 
 
 app.listen(3000, function () {

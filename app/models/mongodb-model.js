@@ -2,7 +2,7 @@ let ObjectId = require('mongodb').ObjectId;
 
 const MongoDBModel = function (MongoClient, url) {
     // Database Name
-    const dbName = 'myproject';
+    const dbName = 'fintech';
 
    // const MongoClient = require('mongodb').MongoClient;
 
